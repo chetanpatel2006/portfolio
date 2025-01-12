@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chetan Patel - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #343a40;
+            --header-color: #007bff;
+            --nav-bg-color: #007bff;
+            --nav-text-color: #ffffff;
+            --container-bg: #ffffff;
+            --toggle-bg: #f8f9fa;
+        }
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #f8f9fa;
+            --header-color: #1e90ff;
+            --nav-bg-color: #1e90ff;
+            --nav-text-color: #ffffff;
+            --container-bg: #1f1f1f;
+            --toggle-bg: #343a40;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.5s ease-in-out;
+        }
+        nav {
+            background-color: var(--nav-bg-color);
+            color: var(--nav-text-color);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: var(--nav-text-color);
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffc107;
+        }
+        .container {
+            width: 75%;
+            margin: 5% auto;
+            background: var(--container-bg);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--header-color);
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #6c757d;
+        }
+        .section {
+            margin: 30px 0;
+        }
+        .section h2 {
+            border-bottom: 3px solid var(--header-color);
+            padding-bottom: 10px;
+            color: var(--header-color);
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: #ffc107;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+        }
+        .section p, .section ul {
+            margin-top: 15px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        ul {
+            list-style-type: circle;
+            padding-left: 25px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .contact a {
+            color: var(--header-color);
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .toggle-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: var(--toggle-bg);
+            color: var(--nav-text-color);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .toggle-button:hover {
+            background-color: var(--nav-bg-color);
+            color: var(--toggle-bg);
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-button" onclick="toggleMode()">Toggle Day/Night Mode</button>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Chetan Patel</h1>
+            <p>Zeal College of Engineering and Research</p>
+        </header>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am Chetan Patel, an aspiring software engineer with a strong foundation in Python programming and a passion for creating efficient and scalable software solutions. Currently pursuing my engineering degree at Zeal College of Engineering and Research, I am keen on contributing to innovative projects that leverage my technical skills.</p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>Zeal College of Engineering and Research</strong></p>
+            <p>Bachelor of Engineering in Computer Science</p>
+            <p>Expected Graduation: [Insert Year]</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Proficient in Python and familiar with libraries such as NumPy, Pandas, and Flask</li>
+                <li>Strong problem-solving and analytical skills</li>
+                <li>Experience with version control systems like Git</li>
+                <li>Basic understanding of web development (HTML, CSS, JavaScript)</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:chetan.patel@gmail.com">chetan.patel@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/chetanpatel">linkedin.com/in/chetanpatel</a></p>
+        </section>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
